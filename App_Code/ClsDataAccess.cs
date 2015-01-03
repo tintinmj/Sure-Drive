@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Web;
 /// </summary>
 public class ClsDataAccess
 {
-    private string connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=G:\CarRentalServices\App_Data\CarRentalSerrviceDB.mdf;Integrated Security=True";
+    private string connectionString = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
     SqlConnection con;
 
 	public ClsDataAccess()
