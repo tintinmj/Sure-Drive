@@ -157,3 +157,8 @@ $RECYCLE.BIN/
 
 # Excluded file from project
 *.exclude
+*.ldf
+*.mdf
+App_Data/CarRentalSerrviceDB.mdf
+App_Data/CarRentalSerrviceDB.mdf
+App_Data/CarRentalSerrviceDB_log.ldf
