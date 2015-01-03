@@ -11,13 +11,7 @@ public class ClsMail
 {
     private static readonly string from = "suredrive2014@gmail.com";
     private static readonly string password = "suredrive10";
-	public ClsMail()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
-
+	
     public static bool sendMail(string to, string subject, string body)
     {
         try
