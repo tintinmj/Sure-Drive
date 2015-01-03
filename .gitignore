@@ -212,3 +212,4 @@ $RECYCLE.BIN/
 
 # Excluded file from project
 *.exclude
+Secret/Email.txt

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CarRentalMaster.master.cs" Inherits="CarRentalMaster"%>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CarRentalMaster.master.cs" Inherits="CarRentalMaster" %>
 
 <!DOCTYPE html>
 
@@ -97,7 +97,7 @@
             </tr>
             <tr>
                 <td style="text-align:center;" class="panel-footer">
-                    All Rights Reserved &copy;2015<strong> Sure Drive Enterprise.</strong> | <a href="AboutUs.aspx" >About Us</a> | <a href="ContactUs.aspx">Contact Us</a> | <a href="ChangePassword.aspx">Change Password</a>
+                    All Rights Reserved &copy;<%= DateTime.Now.Year.ToString() %><strong> Sure Drive Enterprise.</strong> | <a href="AboutUs.aspx" >About Us</a> | <a href="ContactUs.aspx">Contact Us</a> | <a href="ChangePassword.aspx">Change Password</a>
                 </td>
             </tr>
         </table>
