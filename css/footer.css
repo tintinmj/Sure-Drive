@@ -1,0 +1,16 @@
+﻿.footerbrd {width:929px; height:1px; background:#ef0b14; margin:0px auto;}
+.footer {width:929px; margin:0px auto; padding:5px 0px; color:#666666;}
+.footer .c1 {width:300px; margin:0px; padding:0px;}
+.footer .c2 {width:375px; margin:0px; padding:0px; text-align:center;}
+.footer .c3 {width:254px; margin:0px; padding:0px 0px 0px 0px; text-align:right;}
+ul.foot {list-style:none; padding: 0px 0px; margin: 0px;}
+ul.foot li {list-style:none; float:left; line-height:12px;}
+ul.foot li a {color:#666666; padding: 2px 10px; font-size:11px; text-decoration:none; display:block; float:left;}
+
+.footerContent { 
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0px;   
+}

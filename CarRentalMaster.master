@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CarRentalMaster.master.cs" Inherits="CarRentalMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link runat="server" rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+    <link runat="server" rel="icon" href="~/favicon.ico" type="image/ico" />
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.spacelab.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.spacelab.min.css" />
+    <link rel="stylesheet" type="text/css" href="font_awesome/font-awesome-4.1.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function activeLink(activeAnchor)
+        {
+            activeAnchor.classList.add("active");
+        }
+
+        function inactiveLink(inactiveAnchor)
+        {
+            inactiveAnchor.classList.remove("active");
+        }
+
+        function goToUserSearch()
+        {
+            window.location = "UserSearch.aspx";
+            return false;
+        }
+
+        function goToCancel() {
+            window.location = "Cancellation.aspx";
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="width:100%;">
+            <tr>
+                <td style="width:100%;">
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="Home.aspx">
+                                    <img src="asset-images/logo_802441_1v4x5352_screen_display.png" height="35px" width="110px" /></a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav" id="navLinks" style="margin-right: 50%;">
+                                    <li onfocus="activeLink(this);" onblur="inactiveLink(this);" tabindex="2"><a href="Home.aspx">Home</a></li>
+                                    <li onfocus="activeLink(this);" onblur="inactiveLink(this);" tabindex="3"><a href="UserSearch.aspx">Booking</a></li>
+                                    <li onfocus="activeLink(this);" onblur="inactiveLink(this);" tabindex="4"><a href="Cancellation.aspx">Cancel</a></li>
+                                    <li tabindex="5">
+                                        <asp:LinkButton ID="lblEnquiry" Style="cursor: default;" runat="server">Toll Free : 1800 500 700</asp:LinkButton></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <asp:LinkButton ID="lblUserName" Style="cursor: default;" runat="server"></asp:LinkButton>
+                                    </li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        <asp:LinkButton ID="lnkAccount" CausesValidation="false" runat="server" OnClick="lnkAccount_Click"></asp:LinkButton>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </nav>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="height:550px;" valign="top" >
+                    <div>
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;" class="panel-footer">
+                    All Rights Reserved &copy;2014<strong> Sure Drive Enterprise.</strong> | <a href="AboutUs.aspx" >About Us</a> | <a href="ContactUs.aspx">Contact Us</a> | <a href="ChangePassword.aspx">Change Password</a>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    <script type="text/javascript">
+        var navs = document.getElementById("navLinks");
+        var arrLinks = navs.children;
+        for(i=0;i<arrLinks.length;i++)
+        {
+            var arrLinkElement = arrLinks[i].children;
+            var intendedLocation = arrLinkElement[0].href.toString();
+            var arrLocation = intendedLocation.split('/');
+            var pageName = arrLocation[arrLocation.length - 1];
+            var arrPageName = pageName.split('.');
+            if (window.location.toString().indexOf(arrPageName[0]) > -1)
+            {
+                arrLinks[i].classList.add("active");
+            }
+            else
+            {
+                arrLinks[i].classList.remove("active");
+            }
+        }
+    </script>
+</body>
+</html>
