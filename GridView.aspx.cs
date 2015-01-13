@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 public partial class GridView : System.Web.UI.Page
 {
-    private ClsCarHandler handler = new ClsCarHandler();
+    private ClsCarHandler carHandler = new ClsCarHandler();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["admin"] == null)
@@ -23,13 +23,13 @@ public partial class GridView : System.Web.UI.Page
 
     private void populateGrid()
     {
-        DataSet ds = handler.GetDetails();
+        DataSet ds = carHandler.GetDetails();
         DataBind(ds);
     }
 
     private void populateGridByID(string ID)
     {
-        DataSet ds = handler.GetDetailsByID(ID);
+        DataSet ds = carHandler.GetDetailsByID(ID);
         DataBind(ds);
     }
 
@@ -54,7 +54,7 @@ public partial class GridView : System.Web.UI.Page
     protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
     {
         GridView1.EditIndex = e.NewEditIndex;
-        if (ddlNumberPlate.SelectedItem.Value != "")
+        if (ddlNumberPlate.SelectedItem.Value != "Select Number Plate")
         {
             populateGridByID(ddlNumberPlate.SelectedItem.Value);
         }
@@ -73,14 +73,14 @@ public partial class GridView : System.Web.UI.Page
     protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
         string carRegId = GridView1.Rows[e.RowIndex].Cells[1].Text;
-        handler.DeleteCar(carRegId);
+        carHandler.DeleteCar(carRegId);
         GridView1.EditIndex = -1;
         populateGrid();
     }
 
     protected void btnSearch_Click(object sender, EventArgs e)
     {
-        handler.GetDetailsByID(ddlNumberPlate.SelectedValue);
+        carHandler.GetDetailsByID(ddlNumberPlate.SelectedValue);
         populateGridByID(ddlNumberPlate.SelectedValue);
     }
 
@@ -98,7 +98,7 @@ public partial class GridView : System.Web.UI.Page
         car.CarMinHR = int.Parse(((TextBox)GridView1.Rows[rowindex].Cells[6].Controls[0]).Text);
         car.CarAcOrNonAc = ((TextBox)GridView1.Rows[rowindex].Cells[7].Controls[0]).Text;
         car.CarPhotoLink = ((TextBox)GridView1.Rows[rowindex].Cells[8].Controls[0]).Text;
-        handler.UpdateCar(car);
+        carHandler.UpdateCar(car);
 
         GridView1.EditIndex = -1;
         populateGrid();
