@@ -45,8 +45,7 @@ public class ClsCarHandler
     public bool hasDuplicate(string carRegID)
     {
         bool result = false;
-        string query = "select * from " + Tables.Car + " where cregid = '" + carRegID + "'";
-        DataSet ds = access.GetData(query);
+        DataSet ds = GetDetailsByID(carRegID.ToUpper());
 
         if(ds.Tables[0].Rows.Count > 0)
         {
@@ -75,7 +74,7 @@ public class ClsCarHandler
 
     public bool DeleteCar(string carRegID)
     {
-        string query = "delete from " + Tables.Car + " where cregid = '" + carRegID + "'";
+        string query = "delete from " + Tables.Car + " where cregid = '" + carRegID.ToUpper() + "'";
         access.ExecuteQuery(query);
         return true;
     }
@@ -86,9 +85,9 @@ public class ClsCarHandler
         return GetDetailsByID("' OR 1=1 -- ");
     }
 
-    public DataSet GetDetailsByID(string ID)
+    public DataSet GetDetailsByID(string carRegID)
     {
-        string query = "select * from " + Tables.Car + " where cregid = '" + ID + "'";
+        string query = "select * from " + Tables.Car + " where cregid = '" + carRegID.ToUpper() + "'";
         return access.GetData(query);
     }
 }
