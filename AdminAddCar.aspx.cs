@@ -28,7 +28,7 @@ public partial class AdminAddCar : System.Web.UI.Page
         {
             ClsCar car = new ClsCar();
             chandler = new ClsCarHandler();
-            car.CarRegisterId = txtRegNum.Text.ToUpper();
+            car.CarRegisterId = txtRegNum.Text;
             car.CarManufacturer = ddlManf.SelectedItem.Text;
             car.CarModel = ClsFormControlUtils.SentenceCase(txtModel.Text);
             car.CarSeat = int.Parse(ddlSeat.SelectedItem.Text);
