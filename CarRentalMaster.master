@@ -7,16 +7,13 @@
     <title></title>
     <link runat="server" rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
     <link runat="server" rel="icon" href="~/favicon.ico" type="image/ico" />
-    <script src="js/jquery-2.1.1.js"></script>
     <script src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.spacelab.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.spacelab.min.css" />
     <link rel="stylesheet" type="text/css" href="font_awesome/font-awesome-4.1.0/css/font-awesome.min.css" />
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <script type="text/javascript">
@@ -96,7 +93,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="text-align:center;" class="panel-footer">
+                <td style="text-align:center;" class="panel-footer navbar-fixed-bottom">
                     All Rights Reserved &copy;<%= DateTime.Now.Year.ToString() %><strong> Sure Drive Enterprise.</strong> | <a href="AboutUs.aspx" >About Us</a> | <a href="ContactUs.aspx">Contact Us</a> | <a href="ChangePassword.aspx">Change Password</a>
                 </td>
             </tr>
