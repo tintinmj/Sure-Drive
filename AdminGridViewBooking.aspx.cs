@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 public partial class AdminGridViewBooking : System.Web.UI.Page
 {
-    private ClsBookingHandler bhandler = new ClsBookingHandler();
+    private ClsBookingHandler bookingHandler = new ClsBookingHandler();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["admin"] == null)
@@ -23,13 +23,13 @@ public partial class AdminGridViewBooking : System.Web.UI.Page
 
     private void populateGrid()
     {
-        DataSet ds = bhandler.GetDetails();
+        DataSet ds = bookingHandler.GetDetails();
         DataBind(ds);
     }
 
     private void populateGridByID(int ID)
     {
-        DataSet ds = bhandler.GetDetailsByID(ID);
+        DataSet ds = bookingHandler.GetDetailsByID(ID);
         DataBind(ds);
     }
 
@@ -73,14 +73,14 @@ public partial class AdminGridViewBooking : System.Web.UI.Page
     protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
         int bid = int.Parse(GridView1.Rows[e.RowIndex].Cells[1].Text);
-        bhandler.DeleteBooking(bid);
+        bookingHandler.DeleteBooking(bid);
         GridView1.EditIndex = -1;
         populateGrid();
     }
 
     protected void btnSearch_Click(object sender, EventArgs e)
     {
-        bhandler.GetDetailsByID(int.Parse(ddlNumberPlate.SelectedValue));
+        bookingHandler.GetDetailsByID(int.Parse(ddlNumberPlate.SelectedValue));
         populateGridByID(int.Parse(ddlNumberPlate.SelectedValue));
     }
 
@@ -98,7 +98,7 @@ public partial class AdminGridViewBooking : System.Web.UI.Page
         booking.PickUpLandMark = ((TextBox)GridView1.Rows[rowindex].Cells[6].Controls[0]).Text;
         booking.PickUpDate = ((TextBox)GridView1.Rows[rowindex].Cells[7].Controls[0]).Text;
         booking.PickUpTime = ((TextBox)GridView1.Rows[rowindex].Cells[8].Controls[0]).Text;
-        bhandler.UpdateBooking(booking, bid);
+        bookingHandler.UpdateBooking(booking, bid);
 
         GridView1.EditIndex = -1;
         populateGrid();
