@@ -2,7 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
        
     <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript">    </script>
-    <script src="Scripts/libs/jquery.nivo.slider.js" type="text/javascript">    </script>
     <script src="Scripts/libs/jquery.nivo.slider.pack.js" type="text/javascript">    </script>
     <script src="Scripts/libs/jquery.secret-source.min.js" type="text/javascript">    </script>
 
