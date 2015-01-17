@@ -19,7 +19,7 @@
     </script>
                
     <div class="slider-wrapper theme-default">
-        <div id="nivo-slider" class="nivoSlider" style="height: 100%; width: 100%;">
+        <div id="nivo-slider" class="nivoSlider" style="display: block; width: 100% \9; max-width: 100%; height: auto;">
             <img src="Img_Slider/IMG3.jpg" alt=""/>
             <img src="Img_Slider/Honda_Brio-10.jpg" alt=""/>
             <img src="Img_Slider/IMG1.jpg" alt=""/>
