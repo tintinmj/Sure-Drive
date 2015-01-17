@@ -91,7 +91,7 @@ Some points to keep in mind
 ![enter image description here](http://i.imgur.com/UlOBXsZ.jpg "home.aspx")
 
 ##### UserSearch.aspx
-![enter image description here](http://i.imgur.com/tvmgSjf.png "UserSearch.aspx")
+![enter image description here](http://i.imgur.com/8GO0GEL.png "UserSearch.aspx")
 
 ##### ShowCarsToChoose.aspx
 ![enter image description here](http://i.imgur.com/rqecykq.png "ShowCarsToChoose.aspx")
