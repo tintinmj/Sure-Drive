@@ -26,7 +26,7 @@ You are more than welcome to **contribute** to this project.
  3. Create a `branch` with name as `<username-topic-branch>`
  4. Add some code
  5. Send `Pull Request` with proper description. We might approve it.
- 6. <!-- he he -->  
+ 6. 
  7. Above line was left deliberately `;)`
  8.  ***Happy Coding!***
 
