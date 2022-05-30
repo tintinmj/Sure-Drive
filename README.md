@@ -54,7 +54,7 @@ After you have <strike>cloned the project</strike> downloaded the project. Open 
  </connectionStrings>
   ```
   
- - Create three tables `tblbooking`,`tablcars` & `tblusers` as mentioned in [here](https://github.com/tintinmj/Sure-Drive/blob/master/SQLQuery.sql).
+ - Create three tables `tblbooking`,`ti8blcars` & `tblusers` as mentioned in [here](https://github.com/tintinmj/Sure-Drive/blob/master/SQLQuery.sql).
  - Create a new folder `Secret` at the root. Create a new file `Email.txt` and write your email address and password with comma separated values.
 
  ![enter image description here](http://i.imgur.com/yOmDvJH.png "Folder Structure")
@@ -74,7 +74,7 @@ After you have <strike>cloned the project</strike> downloaded the project. Open 
   ```
 
 ---
-# Code Structure##
+## Code Structure ##
 
 Some points to keep in mind
 
